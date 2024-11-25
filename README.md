@@ -3,6 +3,7 @@
 ## Peter de Guzman
 
 ### Status Badge
+[![Build and Push Docker Image](https://github.com/nogibjj/PeterdeGuzman_Mini12/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/PeterdeGuzman_Mini12/actions/workflows/cicd.yml)
 
 ### Project Description:
 This repo contains code to a simple python Flask app. containerized with a dockerfile. The goal here is to both demonstrate running your application within a docker container (using docker run terminal commands) but to also build a docker image in your CI/CD pipeline which will be pushed to Docker Hub or other container management service.
