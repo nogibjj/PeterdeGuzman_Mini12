@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 100dvw;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(244, 230, 178, 0.949);
+            text-align: center;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .results-container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        .result-item {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .average-rating {
+            font-size: 1.5em;
+            color: #f39c12;
+        }
+        .error-message {
+            color: red;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        {% if author and average_rating %}
+            <h1>Results for "{{ author }}"</h1>
+            <div class="result-item">
+                <p><strong>Average Rating:</strong> <span class="average-rating">{{ average_rating }}</span></p>
+            </div>
+        {% else %}
+            <p class="error-message">No results found for the given author.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

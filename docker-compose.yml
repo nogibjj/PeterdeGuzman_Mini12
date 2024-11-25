@@ -1,0 +1,20 @@
+
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack_main
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    ports:
+      - "4566:4566"  # Main LocalStack gateway for all services
+      - "4510-4559:4510-4559"  # Ports for specific services (optional)
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./localstack_data:/var/lib/localstack"  # Persist data across restarts (optional)
+    networks:
+      - localstack_network
+
+networks:
+  localstack_network:
+    driver: bridge
