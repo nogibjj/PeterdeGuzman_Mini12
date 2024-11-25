@@ -1,5 +1,5 @@
 # Define the image name
-IMAGE_NAME = PeterdeGuzman_Mini12
+IMAGE_NAME = peterdeguzman_mini12
 DOCKER_ID_USER = peterdeguzman
 
 # Build the Docker image
