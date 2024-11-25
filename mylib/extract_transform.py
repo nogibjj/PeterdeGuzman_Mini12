@@ -17,11 +17,9 @@ import csv
 
 
 # Transform to CSV
-import json
-import csv
 
 
-def parse_json_to_csv(input_json_file, output_csv_file="output.csv"):
+def parse_json_to_csv(input_json_file, output_csv_file="authors.csv"):
     """
     Parse a JSON file and save its contents into a CSV file.
 
